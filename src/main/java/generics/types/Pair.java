@@ -1,12 +1,9 @@
 package generics.types;
 
-import java.util.Random;
 import java.util.function.Function;
 
-/**
- * Created by Ken Kousen on 11/9/16.
- */
 public class Pair<F, S> {
+
     private F first;
     private S second;
 
@@ -15,16 +12,15 @@ public class Pair<F, S> {
         this.second = second;
     }
 
-    public Pair<S,F> reverse() {
+    public Pair<S, F> reverse() {
         return new Pair<>(second, first);
     }
 
-    public <R,U> Pair<R,U> transform(
-            Function<F,R> xfirst,
-            Function<S,U> xsecond) {
-        return new Pair<R,U>(xfirst.apply(first), xsecond.apply(second));
+    public <R, U> Pair<R, U> transform(
+            Function<F, R> xfirst,
+            Function<S, U> xsecond) {
+        return new Pair<R, U>(xfirst.apply(first), xsecond.apply(second));
     }
-
 
     public F getFirst() {
         return first;
@@ -49,7 +45,8 @@ public class Pair<F, S> {
 
         Pair<?, ?> pair = (Pair<?, ?>) o;
 
-        if (first != null ? !first.equals(pair.first) : pair.first != null) return false;
+        if (first != null ? !first.equals(pair.first) : pair.first != null)
+            return false;
         return second != null ? second.equals(pair.second) : pair.second == null;
     }
 
@@ -67,4 +64,5 @@ public class Pair<F, S> {
                 ", second=" + second +
                 '}';
     }
+
 }

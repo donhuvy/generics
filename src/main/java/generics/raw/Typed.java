@@ -1,13 +1,10 @@
 package generics.raw;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ken Kousen on 11/8/16.
- */
 public class Typed {
+
     public static void main(String[] args) {
         List<String> strings = new ArrayList<>();
         strings.add("this");
@@ -28,4 +25,5 @@ public class Typed {
         int x = ints.get(0);
         int y = ints.get(1);
     }
+
 }

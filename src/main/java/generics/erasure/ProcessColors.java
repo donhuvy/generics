@@ -1,11 +1,12 @@
 package generics.erasure;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Arrays;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class ProcessColors {
+
     private Color color;
 
     public void setColor(Color color) {
@@ -17,9 +18,10 @@ public class ProcessColors {
     }
 
     @SafeVarargs
-    public final Color applyFilters(Function<Color,Color>... filters) {
+    public final Color applyFilters(Function<Color, Color>... filters) {
         return Arrays.stream(filters)
                 .reduce(Function.identity(), Function::andThen)
                 .apply(color);
     }
+
 }

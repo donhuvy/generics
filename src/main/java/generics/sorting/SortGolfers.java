@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SortGolfers {
+
     private List<Golfer> golfers = Arrays.asList(
             new Golfer("Jack", "Nicklaus", 68),
             new Golfer("Tiger", "Woods", 70),
@@ -15,14 +16,14 @@ public class SortGolfers {
             new Golfer("Bubba", "Watson", 70)
     );
 
-    // default sort is by score
+    // Default sort is by score.
     public void defaultSort() {
         golfers.stream()
                 .sorted()
                 .forEach(System.out::println);
     }
 
-    // sort by score, then by last name
+    // Sort by score, then by last name.
     public void sortByScoreThenLast() {
         golfers.stream()
                 .sorted(Comparator.comparingInt(Golfer::getScore)
@@ -30,7 +31,7 @@ public class SortGolfers {
                 .forEach(System.out::println);
     }
 
-    // sort by score, then by last, then by first
+    // Sort by score, then by last, then by first.
     public void sortByScoreThenLastThenFirst() {
         golfers.stream()
                 .sorted(Comparator.comparingInt(Golfer::getScore)
@@ -44,7 +45,7 @@ public class SortGolfers {
                 .collect(Collectors.partitioningBy(
                         golfer -> golfer.getScore() < 70));
 
-        map.forEach((k,v) -> {
+        map.forEach((k, v) -> {
             System.out.println(k);
             v.forEach(System.out::println);
         });
@@ -52,9 +53,10 @@ public class SortGolfers {
 
     public static void main(String[] args) {
         SortGolfers sg = new SortGolfers();
-//        sg.defaultSort();
-//        sg.sortByScoreThenLast();
-//        sg.sortByScoreThenLastThenFirst();
+        //sg.defaultSort();
+        //sg.sortByScoreThenLast();
+        //sg.sortByScoreThenLastThenFirst();
         sg.partitionByScore();
     }
+
 }

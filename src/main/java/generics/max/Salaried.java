@@ -1,9 +1,7 @@
 package generics.max;
 
-/**
- * Created by Ken Kousen on 11/9/16.
- */
 public class Salaried extends Employee {
+
     private double salary;
 
     public Salaried(int id, String name) {
@@ -17,4 +15,5 @@ public class Salaried extends Employee {
     public double getSalary() {
         return salary;
     }
+
 }

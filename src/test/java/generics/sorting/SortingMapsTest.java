@@ -9,7 +9,9 @@ import java.util.Map;
 import static org.junit.Assert.assertTrue;
 
 public class SortingMapsTest {
+
     private SortingMaps<String, Integer> sm = new SortingMaps<>();
+
     private Map<String, Integer> map = new HashMap<>();
 
     @Before
@@ -24,20 +26,18 @@ public class SortingMapsTest {
 
     @Test
     public void getMapSortedByKey() throws Exception {
-        sm.getMapSortedByKey().keySet().stream()
-            .reduce((prev, curr) -> {
-                assertTrue(prev.compareTo(curr) <= 0);
-                return curr;
-            });
+        sm.getMapSortedByKey().keySet().stream().reduce((prev, curr) -> {
+            assertTrue(prev.compareTo(curr) <= 0);
+            return curr;
+        });
     }
 
     @Test
     public void getMapSortedByKeyDesc() throws Exception {
-        sm.getMapSortedByKeyDesc().keySet().stream()
-                .reduce((prev, curr) -> {
-                    assertTrue(prev.compareTo(curr) >= 0);
-                    return curr;
-                });
+        sm.getMapSortedByKeyDesc().keySet().stream().reduce((prev, curr) -> {
+            assertTrue(prev.compareTo(curr) >= 0);
+            return curr;
+        });
     }
 
     @Test
@@ -59,8 +59,8 @@ public class SortingMapsTest {
                 });
     }
 
-    private <K,V> void printMap(Map<K,V> m) {
-        m.forEach((k,v) -> System.out.println(k + ": " + v));
+    private <K, V> void printMap(Map<K, V> m) {
+        m.forEach((k, v) -> System.out.println(k + ": " + v));
     }
 
 }

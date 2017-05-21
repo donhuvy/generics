@@ -12,10 +12,8 @@ import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
-/**
- * Created by Ken Kousen on 11/9/16.
- */
 public class MapEmployees {
+
     public static List<Employee> createEmployees() {
         return Arrays.asList(
                 new Employee(1, "Peter Gibbons"),
@@ -39,7 +37,6 @@ public class MapEmployees {
                 .map(Employee::getName)
                 .mapToInt(String::length)
                 .sum();
-
 
         // Add employees to a map using id as key
         Map<Integer, Employee> employeeMap = employees.stream()
@@ -71,4 +68,5 @@ public class MapEmployees {
                     System.out.println(entry.getKey() + ": " + entry.getValue());
                 });
     }
+
 }

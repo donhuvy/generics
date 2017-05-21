@@ -5,10 +5,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import static java.util.Comparator.*;
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.comparingInt;
+import static java.util.Comparator.naturalOrder;
+import static java.util.Comparator.reverseOrder;
 import static java.util.stream.Collectors.toList;
 
 public class SortingDemo {
+
     private List<String> sampleStrings =
             Arrays.asList("this", "is", "a", "list", "of", "strings");
 
@@ -72,4 +76,5 @@ public class SortingDemo {
                         .thenComparing(reverseOrder()))
                 .collect(toList());
     }
+
 }

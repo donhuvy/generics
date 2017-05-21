@@ -1,11 +1,14 @@
 package generics.sorting;
 
 public class Golfer implements Comparable<Golfer> {
+
     private String first;
     private String last;
     private int score;
 
-    public Golfer() {}
+    public Golfer() {
+
+    }
 
     public Golfer(String first, String last) {
         this.first = first;
@@ -54,7 +57,8 @@ public class Golfer implements Comparable<Golfer> {
 
         Golfer golfer = (Golfer) o;
 
-        if (first != null ? !first.equals(golfer.first) : golfer.first != null) return false;
+        if (first != null ? !first.equals(golfer.first) : golfer.first != null)
+            return false;
         return last != null ? last.equals(golfer.last) : golfer.last == null;
 
     }
@@ -74,4 +78,5 @@ public class Golfer implements Comparable<Golfer> {
                 ", score=" + score +
                 '}';
     }
+
 }

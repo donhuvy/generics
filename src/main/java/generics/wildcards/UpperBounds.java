@@ -8,10 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
-/**
- * Created by Ken Kousen on 11/9/16.
- */
 public class UpperBounds {
+
     public static double sumList(List<? extends Number> list) {
         return list.stream()
                 .mapToDouble(Number::doubleValue)
@@ -45,4 +43,5 @@ public class UpperBounds {
         System.out.println(sumList(doubles1));
         System.out.println(sumList(bigDecimals));
     }
+
 }

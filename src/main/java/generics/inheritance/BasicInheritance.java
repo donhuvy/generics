@@ -4,10 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ken Kousen on 11/8/16.
- */
 public class BasicInheritance {
+
     public static void main(String[] args) {
         List<Object> objects = new ArrayList<>();
         objects.add("Hello");
@@ -20,4 +18,5 @@ public class BasicInheritance {
         Object object = "Hello";  // okay
         // strings.add(object); // Does not compile
     }
+
 }

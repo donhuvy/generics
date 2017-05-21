@@ -1,14 +1,14 @@
 package generics.erasure;
 
-import generics.erasure.ProcessColors;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.*;
+import java.awt.Color;
 
 import static org.junit.Assert.assertEquals;
 
 public class ProcessColorsTest {
+
     private ProcessColors processColors = new ProcessColors();
     private Color color = new Color(100, 50, 0);
 
@@ -41,4 +41,5 @@ public class ProcessColorsTest {
                 Color::brighter, Color::darker);
         assertEquals(new Color(99, 49, 0), c);
     }
+
 }

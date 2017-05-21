@@ -1,13 +1,10 @@
 package generics.raw;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ken Kousen on 11/8/16.
- */
 public class RawTypes {
+
     public static void main(String[] args) {
         List strings = new ArrayList();
         strings.add("this");
@@ -23,4 +20,5 @@ public class RawTypes {
             System.out.printf("%7s has %d characters%n", s, s.length());
         }
     }
+
 }
